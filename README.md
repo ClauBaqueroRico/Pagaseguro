@@ -22,19 +22,24 @@ Se emplean los datos de https://www.movilidadbogota.gov.co/web/simur correspondi
 
 ```
 📦 MarketSegInsurancePayAsYouDrive
- ┣ 📄 Base_Accidentes.ipynb --> Notebook con el pre procesamiento y exploración de ACCIDENTES.
- ┣ 📄 Base_Conductores.ipynb --> Notebook con el pre procesamiento y exploración de CONDUCTORES.
- ┣ 📄 Base_Victimas.ipynb --> Notebook con el pre procesamiento y exploración de VICTIMAS.
+ ┣ 📄 ETL_accidentes.ipynb --> Notebook con la ETL para crear la base agregada de ACCIDENTES.
+ ┣ 📄 ETL_conductores.ipynb --> Notebook con la ETL para crear la base agregada de CONDUCTORES.
+ ┣ 📄 Deteccion_Anomalias.ipynb --> Notebook con lo desarrollado para detección de anomalías.
+ ┣ 📄 Segmentacion_Riesgo.ipynb --> Notebook con lo desarrollado para la segmentación de accidentes, conductores y tarifas.
  ┣ 📄 README.md --> Documento de orientación y explicación del proyecto y sus archivos.
  ┣ 📄 .gitignore --> Archivo para ignorar archivos y carpetas a versionar.
  ┣ 📂 data --> Carpeta con los datos a trabajar.
  ┃ ┣ 📄 Base_2019.xlsx --> Dataset original de la fuente.
  ┃ ┣ 📄 Base_2019_con_latitud_longitud.xlsx --> Dataset original complementado con latitudes y longitudes.
- ┃ ┗ 📄 Base_accidentes.xlsx --> Base de accidentes con imputaciones almacenadas (debido al tiempo que tomó el procesarla)
+ ┃ ┣ 📄 CONDUCTORES_AGG.xlsx --> Base de conductores agregada (Resultado ETL).
+ ┃ ┗ 📄 ACCIDENTES_VF.xlsx --> Base de accidentes agregada (Resultado ETL).
  ┣ 📂 docs --> Archivos de documentación y entregas.
  ┃ ┣ 📄 Anuario_Siniestralidad_2019.pdf --> Archivo de exploración que acompañaba la base original.
+ ┃ ┣ 📄 DisenoETL.xslx --> Diseño de las ETLs en excel.
  ┃ ┣ 📄 E1 Proyecto.docx --> Entrega 1 del proyecto en word.
- ┃ ┗ 📄 E1 Proyecto.pdf --> Entrega 1 del proyecto en PDF.
+ ┃ ┣ 📄 E1 Proyecto.pdf -->  Entrega 1 del proyecto en PDF.
+ ┃ ┣ 📄 E1 Proyecto.docx --> Entrega 2 del proyecto en word.
+ ┃ ┗ 📄 E2 Proyecto.pdf --> Entrega 2 del proyecto en PDF.
  ┗ 📂 figs --> Imágenes de apoyo o recurso.
     ┗ 📄 ans_banner_1920x200.png --> Banner de UniAndes.
  ```
@@ -46,9 +51,10 @@ A grandes rasgos este proyecto se abordará bajo los siguientes pasos y premisas
 
 1. Preprocesamiento de Datos.
 2. Exploración de los Datos.
-3. Aplicación de algoritmos no supervisados en los Datos.
-4. Evaluación y validación.
-5. Conclusiones y recomendaciones. 
+3. Diseño e implementación de ETLs para construir bases de accidentes y conductores agregadas.
+4. Aplicación de algoritmos no supervisados en los Datos.
+5. Evaluación y validación.
+6. Documentación, conclusiones y recomendaciones.
 
 
 ## Integrantes del equipo
